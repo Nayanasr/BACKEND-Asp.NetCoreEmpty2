@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>@ViewBag.Title</h1>
+
+
+    <h3>ID : @ViewBag.Cart.cart_id</h3>
+    <h3>Name : @ViewBag.Cart.cart_name</h3>
+    <h3>Type : @ViewBag.Cart.shopping_type</h3>
+    <h3>Items : @ViewBag.Cart.no_of_items</h3>
+    @*<h3>Type of items : @ViewBag.Cart.type_of_items</h3>*@
+
+<ul>
+    <h3>Type of items:</h3>
+
+     @{ if (ViewBag.Cart.type_of_items != null) {
+
+            foreach (var cart in ViewBag.Cart.type_of_items) {
+
+        <li>@cart</li> }
+                   
+         
+         } }
+</ul>
+
+
+
+</body>
+</html>
